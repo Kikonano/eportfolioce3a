@@ -33,7 +33,6 @@
       min-height: 100vh;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 0;
@@ -106,7 +105,6 @@
       width: 100%;
     }
 
-    /* Sections */
     section {
       padding: 10rem 2rem 8rem;
       max-width: 1100px;
@@ -182,7 +180,6 @@
       display: block;
     }
 
-    /* Buttons */
     .btn {
       display: inline-block;
       background: var(--primary);
@@ -244,10 +241,10 @@
 </nav>
 
 <section id="home">
-  <h1>Hello, I'm Leang Cheasinh</h1>
+  <h1>Hello, I am Leang Cheasinh</h1>
   <p class="intro-text">
     Welcome to my learning portfolio.<br>
-    I'm documenting my English learning journey from CE3A Class including, writing tasks, extensive reading, video logs, and personal reflections.
+    Here, you'll find samples of my work, including writing assignments, reflections on what I've learned, reading logs, and even a recording of me reflecting as well. It's all proof of my progress and the effort I've put in over the past months.
   </p>
   <a href="#writing" class="btn">Explore My Work →</a>
 </section>
@@ -255,59 +252,62 @@
 <section id="writing">
   <h2>Writing Tasks</h2>
   <div class="card">
-    <h3>placeholder</h3>
+    <h3>Written Assignment 1:</h3>
+    <span class="date">November 2025</span>
+    <p>Click "Read" to navigate to the assignment document.</p>
+    <a href="Writing Assignment 1.pdf" class="btn btn-outline" style="margin-top:1rem;" target="_blank">Read</a>
+  </div>  
+
+  <div class="card">
+    <h3>Written Assignment 2:</h3>
     <span class="date">December 2025</span>
-    <p>placeholder</p>
-    <a href="#" class="btn btn-outline" style="margin-top:1rem;">Read Full Text</a>
+    <p>Click "Read" to navigate to the assignment document.</p>
+    <a href="Writing Assignment 2.pdf" class="btn btn-outline" style="margin-top:1rem;" target="_blank">Read</a>
   </div>
 
   <div class="card">
-    <h3>placeholder</h3>
+    <h3>Written Assignment 3:</h3>
     <span class="date">January 2026</span>
-    <p>placeholder</p>
-    <a href="#" class="btn btn-outline" style="margin-top:1rem;">Read Full Text</a>
+    <p>Click "Read" to navigate to the assignment document.</p>
+    <a href="Writing Assignment 3.pdf" class="btn btn-outline" style="margin-top:1rem;" target="_blank">Read</a>
   </div>
 
-  <!-- Add more cards as needed -->
+  <div class="card">
+    <h3>Written Assignment 4:</h3>
+    <span class="date">January 2026</span>
+    <p>Click "Read" to navigate to the assignment document.</p>
+    <a href="Writing Assignment 4.pdf" class="btn btn-outline" style="margin-top:1rem;" target="_blank">Read</a>
+  </div>
+
 </section>
 
 <section id="reading">
-  <h2>Reading Tasks</h2>
+  <h2>Reading Logs & Video Reflection</h2>
   <div class="card">
-    <h3>placeholder</h3>
-    <span class="date">placeholder</span>
-    <p>placeholder</p>
-    <div style="margin:1.5rem 0;">
-      <a href="https://www.youtube.com/watch?v=..." target="_blank" class="btn">Related Video</a>
+    <h3>Reading Log:</h3>
+    <span class="date">December 2025</span>
+    <p>Click "Read" to navigate to the reading log document.</p>
+    <a href="Reading log.pdf" class="btn btn-outline" style="margin-top:1rem;" target="_blank">Read</a>
+  </div>
+  <div class="card">
+    <h3>Video Reflection:</h3>
+    <span class="date">January 2026</span>
+    <p>Click "Watch Video" to view my reflection on the reading material.</p>
+      <a href="https://youtu.be/EtmfvJwwghI" target="_blank" class="btn" style="margin-top:1rem;">Watch</a>
     </div>
   </div>
-
-  <div class="card">
-    <h3>placeholder</h3>
-    <span class="date">placeholder</span>
-    <p>placeholder</p>
-  </div>
-
-  <!-- Add more -->
 </section>
 
 <section id="reflection">
-  <h2>Written Reflections</h2>
+  <h2>Written Reflection</h2>
   <div class="card">
-    <h3>placeholder</h3>
-    <p>placeholder</p>
-    <p style="margin-top:1.5rem;">placeholder</p>
-  </div>
-
-  <div class="card">
-    <h3>placeholder</h3>
-    <span class="date">placeholder</span>
-    <p>...</p>
+    <h3>January 2026</h3>
+    <p>Click the "Read" button below to view my written reflection on the reading material.</p>
+    <a href="Reflection.pdf" class="btn btn-outline" style="margin-top:1rem;" target="_blank">Read</a>
   </div>
 </section>
 
 <script>
-  // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -315,13 +315,11 @@
         behavior: 'smooth'
       });
 
-      // Update active link
       document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
       this.classList.add('active');
     });
   });
 
-  // Navbar scroll effect
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
     if (window.scrollY > 100) {
@@ -331,7 +329,6 @@
     }
   });
 
-  // Fade-in cards on scroll
   const cards = document.querySelectorAll('.card');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -343,7 +340,6 @@
 
   cards.forEach(card => observer.observe(card));
 
-  // Set first link active by default
   document.querySelector('.nav-links a').classList.add('active');
 </script>
 </body>
